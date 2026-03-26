@@ -1,0 +1,10 @@
+PS D:\1\Complete Code of the Hybrid SVM and Rule based engine\Bids Rules> python .\test_score.py
+Segment-level Accuracy: 0.738
+Avg Confidence (correct predictions): 0.271
+TestScore (confidence-weighted): 0.200     
+PS D:\1\Complete Code of the Hybrid SVM and Rule based engine\Bids Rules> python .\sjf.py
+Total segments: 7534
+Correct predictions: 5563 (73.84%)
+Wrong predictions: 1971 (26.16%)    
+Ratio of correct to wrong: 5563:1971
+PS D:\1\Complete Code of the Hybrid SVM and Rule based engine\Bids Rules> 

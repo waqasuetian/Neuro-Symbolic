@@ -1,0 +1,115 @@
+PS F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy> python .\model.py
+2025-11-28 17:03:12.506273: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-28 17:03:18.739652: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Starting EEG Detection Pipeline. Output directory: F:\1\Code and Ablation Study\hyb_Cnn-Lstm\CompleteModel_CNNandLSTM\result
+
+[1/7] Loading and splitting data...
+Unique classes found in F:\1\Code and Ablation Study\hyb_Cnn-Lstm\dataset: [0 1], total: 2
+Class counts:
+ Class 0: 68721
+ Class 1: 378
+Total Epochs Loaded: 69099 | Input Shape: (69099, 1024, 19)
+Training Set: (55279, 1024, 19) | Validation Set: (13820, 1024, 19)
+Computed class weights: {0: 0.5027466031249431, 1: 91.52152317880795}
+
+[2/7] Building and Training CNN-LSTM Feature Extractor...
+2025-11-28 17:14:15.272451: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/30
+1728/1728 - 391s - 226ms/step - accuracy: 0.9420 - loss: 0.5987 - val_accuracy: 0.9945 - val_loss: 0.0326 - learning_rate: 0.0010
+Epoch 2/30
+1728/1728 - 346s - 200ms/step - accuracy: 0.9910 - loss: 0.0158 - val_accuracy: 0.9939 - val_loss: 0.0053 - learning_rate: 0.0010
+Epoch 3/30
+1728/1728 - 286s - 166ms/step - accuracy: 0.9920 - loss: 0.0140 - val_accuracy: 0.9945 - val_loss: 0.0056 - learning_rate: 0.0010
+Epoch 4/30
+1728/1728 - 256s - 148ms/step - accuracy: 0.9923 - loss: 0.0138 - val_accuracy: 0.9945 - val_loss: 0.0048 - learning_rate: 0.0010
+Epoch 5/30
+1728/1728 - 239s - 138ms/step - accuracy: 0.9921 - loss: 0.0125 - val_accuracy: 0.9941 - val_loss: 0.0077 - learning_rate: 0.0010
+Epoch 6/30
+1728/1728 - 204s - 118ms/step - accuracy: 0.9929 - loss: 0.0223 - val_accuracy: 0.9945 - val_loss: 0.0125 - learning_rate: 0.0010
+Epoch 7/30
+1728/1728 - 193s - 112ms/step - accuracy: 0.9924 - loss: 0.0134 - val_accuracy: 0.9929 - val_loss: 0.0053 - learning_rate: 0.0010
+Epoch 8/30
+1728/1728 - 169s - 98ms/step - accuracy: 0.9911 - loss: 0.0101 - val_accuracy: 0.9750 - val_loss: 0.0113 - learning_rate: 0.0010
+Epoch 9/30
+1728/1728 - 171s - 99ms/step - accuracy: 0.9916 - loss: 0.0107 - val_accuracy: 0.9939 - val_loss: 0.0054 - learning_rate: 0.0010
+Epoch 10/30
+1728/1728 - 170s - 99ms/step - accuracy: 0.9908 - loss: 0.0117 - val_accuracy: 0.9944 - val_loss: 0.0286 - learning_rate: 0.0010
+Epoch 11/30
+1728/1728 - 171s - 99ms/step - accuracy: 0.9924 - loss: 0.0105 - val_accuracy: 0.9944 - val_loss: 0.0045 - learning_rate: 0.0010
+Epoch 12/30
+1728/1728 - 170s - 98ms/step - accuracy: 0.9918 - loss: 0.0089 - val_accuracy: 0.9748 - val_loss: 0.0091 - learning_rate: 0.0010
+Epoch 13/30
+1728/1728 - 171s - 99ms/step - accuracy: 0.9918 - loss: 0.0094 - val_accuracy: 0.9948 - val_loss: 0.0055 - learning_rate: 0.0010
+Epoch 14/30
+1728/1728 - 169s - 98ms/step - accuracy: 0.9917 - loss: 0.0106 - val_accuracy: 0.9945 - val_loss: 0.0075 - learning_rate: 0.0010
+Epoch 15/30
+1728/1728 - 205s - 118ms/step - accuracy: 0.9921 - loss: 0.0084 - val_accuracy: 0.9943 - val_loss: 0.0052 - learning_rate: 0.0010
+Epoch 16/30
+1728/1728 - 201s - 116ms/step - accuracy: 0.9915 - loss: 0.0133 - val_accuracy: 0.9946 - val_loss: 0.0104 - learning_rate: 0.0010
+Epoch 17/30
+1728/1728 - 171s - 99ms/step - accuracy: 0.9918 - loss: 0.0124 - val_accuracy: 0.9945 - val_loss: 0.0067 - learning_rate: 0.0010
+Epoch 18/30
+1728/1728 - 173s - 100ms/step - accuracy: 0.9916 - loss: 0.0086 - val_accuracy: 0.9883 - val_loss: 0.0063 - learning_rate: 0.0010
+Epoch 19/30
+1728/1728 - 199s - 115ms/step - accuracy: 0.9919 - loss: 0.0079 - val_accuracy: 0.9945 - val_loss: 0.0031 - learning_rate: 0.0010
+Epoch 20/30
+1728/1728 - 170s - 98ms/step - accuracy: 0.9916 - loss: 0.0089 - val_accuracy: 0.9891 - val_loss: 0.0057 - learning_rate: 0.0010
+Epoch 21/30
+1728/1728 - 170s - 98ms/step - accuracy: 0.9917 - loss: 0.0076 - val_accuracy: 0.9944 - val_loss: 0.0033 - learning_rate: 0.0010
+Epoch 22/30
+1728/1728 - 170s - 98ms/step - accuracy: 0.9919 - loss: 0.0167 - val_accuracy: 0.9946 - val_loss: 0.0172 - learning_rate: 0.0010
+Epoch 23/30
+1728/1728 - 170s - 98ms/step - accuracy: 0.9917 - loss: 0.0122 - val_accuracy: 0.9906 - val_loss: 0.0056 - learning_rate: 0.0010
+Epoch 24/30
+1728/1728 - 202s - 117ms/step - accuracy: 0.9919 - loss: 0.0080 - val_accuracy: 0.9946 - val_loss: 0.0037 - learning_rate: 0.0010
+Epoch 25/30
+1728/1728 - 202s - 117ms/step - accuracy: 0.9914 - loss: 0.0074 - val_accuracy: 0.9941 - val_loss: 0.0035 - learning_rate: 0.0010
+Epoch 26/30
+1728/1728 - 170s - 99ms/step - accuracy: 0.9917 - loss: 0.0072 - val_accuracy: 0.9945 - val_loss: 0.0048 - learning_rate: 0.0010
+Epoch 27/30
+1728/1728 - 168s - 97ms/step - accuracy: 0.9921 - loss: 0.0076 - val_accuracy: 0.9933 - val_loss: 0.0040 - learning_rate: 0.0010
+Epoch 28/30
+1728/1728 - 167s - 97ms/step - accuracy: 0.9922 - loss: 0.0063 - val_accuracy: 0.9946 - val_loss: 0.0031 - learning_rate: 5.0000e-04
+
+CNN-LSTM Training Complete. Best Val Accuracy: 0.9948
+
+[3/7] Extracting Deep Features...
+Extracting features from 55279 samples...
+864/864 ━━━━━━━━━━━━━━━━━━━━ 32s 35ms/step 
+Extracting features from 13820 samples...
+216/216 ━━━━━━━━━━━━━━━━━━━━ 7s 34ms/step 
+Feature shape: (55279, 128)
+
+[4/7] Scaling and PCA...
+PCA reduced dimensions: 32, Explained variance: 1.0000
+
+[5/7] Training SVM...
+
+[6/7] Evaluating Hybrid Pipeline on Validation Data...
+============================================================
+FINAL HYBRID PIPELINE VALIDATION ACCURACY: 0.9950
+============================================================
+Classification Report:
+               precision    recall  f1-score   support
+
+           0     0.9951    0.9999    0.9975     13744
+           1     0.8182    0.1184    0.2069        76
+
+    accuracy                         0.9950     13820
+   macro avg     0.9067    0.5591    0.6022     13820
+weighted avg     0.9942    0.9950    0.9931     13820
+
+Unique classes found in F:\1\Code and Ablation Study\hyb_Cnn-Lstm\dataset\test: [0 1], total: 2
+Class counts:
+ Class 0: 3706
+ Class 1: 63
+
+[+] Evaluating on Test Set...
+Extracting features from 3769 samples...
+59/59 ━━━━━━━━━━━━━━━━━━━━ 2s 35ms/step
+TEST ACCURACY: 0.9851
+
+[7/7] Saving pipeline artifacts to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\CompleteModel_CNNandLSTM\result...
+All artifacts saved successfully.
+PS F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy> 

@@ -1,0 +1,10 @@
+PS D:\1\Complete Code of the Hybrid SVM and Rule based engine\Tuh Rules> & C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe "d:/1/Complete Code of the Hybrid SVM and Rule based engine/Tuh Rules/sjf.py"
+Total segments: 1020511
+Correct predictions: 688332 (67.45%)
+Wrong predictions: 332179 (32.55%)  
+Ratio of correct to wrong: 688332:332179
+PS D:\1\Complete Code of the Hybrid SVM and Rule based engine\Tuh Rules> & C:\Users\hp\AppData\Local\Programs\Python\Python311\python.exe "d:/1/Complete Code of the Hybrid SVM and Rule based engine/Tuh Rules/test_score.py"
+Segment-level Accuracy: 0.650
+Avg Confidence (correct predictions): 0.362
+TestScore (confidence-weighted): 0.235     
+PS D:\1\Complete Code of the Hybrid SVM and Rule based engine\Tuh Rules> 

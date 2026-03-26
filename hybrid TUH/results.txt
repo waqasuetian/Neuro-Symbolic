@@ -1,0 +1,67 @@
+PS D:\1\TUH DATASET\combined_Svmand_rule> python .\ruustss.py
+
+========= SVM =========
+Total segments: 3769
+Correct segments: 3657 (97.03%)
+Wrong segments  : 112 (2.97%)
+Ratio correct:wrong = 3657:112
+
+========= Rule-Based =========
+Total segments: 3769
+Correct segments: 3079 (81.69%)
+Wrong segments  : 690 (18.31%)
+Ratio correct:wrong = 3079:690
+
+========= Hybrid (SVM+Rule) =========
+Total segments: 3769
+Correct segments: 3537.0 (93.84%)
+Wrong segments  : 232.0 (6.16%)
+Ratio correct:wrong = 3537.0:232.0
+
+SVM vs Rule Agreement: 2995 / 3769 (79.46%)
+
+Rule-Based TestScore : 0.1870
+Hybrid TestScore     : 0.1876
+
+ Evaluation results saved to evaluation_hybrid_results.csv
+
+===== HYBRID EVALUATION =====
+Total segments: 3769
+Accuracy: 93.84%
+Confidence-weighted TestScore: 0.1876
+
+Saved: evaluation_hybrid_results.csv
+PS D:\1\TUH DATASET\combined_Svmand_rule> python .\ruustss.py
+
+========= SVM =========
+Total segments: 491071
+Correct segments: 461027 (93.88%)
+Wrong segments  : 30044 (6.12%)
+Ratio correct:wrong = 461027:30044
+
+========= Rule-Based =========
+Total segments: 491071
+Correct segments: 377962 (76.97%)
+Wrong segments  : 113109 (23.03%)
+Ratio correct:wrong = 377962:113109
+
+========= Hybrid (SVM+Rule) =========
+Total segments: 491071
+Correct segments: 422634.0 (86.06%)
+Wrong segments  : 68437.0 (13.94%)
+Ratio correct:wrong = 422634.0:68437.0
+
+SVM vs Rule Agreement: 373812 / 491071 (76.12%)
+
+Rule-Based TestScore : 0.2191
+Hybrid TestScore     : 0.2182
+
+✅ Evaluation results saved to evaluation_hybrid_results.csv
+
+===== HYBRID EVALUATION =====
+Total segments: 491071
+Accuracy: 86.06%
+Confidence-weighted TestScore: 0.2182
+
+Saved: evaluation_hybrid_results.csv
+PS D:\1\TUH DATASET\combined_Svmand_rule> 

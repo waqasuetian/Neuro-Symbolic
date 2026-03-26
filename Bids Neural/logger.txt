@@ -1,0 +1,216 @@
+PS F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy> python .\model.py
+2025-11-29 23:15:36.716842: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-29 23:15:42.197664: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+[1] Loading data...
+Unique classes found in F:\1\Code and Ablation Study\hyb_Cnn-Lstm\dataset: [0 1], total: 2
+Class counts:
+ Class 0: 68721
+ Class 1: 378
+Loaded: (69099, 1024, 19)
+
+[2] Building model...
+2025-11-29 23:24:30.262338: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+[3] Training CNN-LSTM (NO early stopping)...
+Epoch 1/40
+
+Epoch 1: val_loss improved from inf to 0.00683, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras    
+1728/1728 - 241s - 140ms/step - accuracy: 0.9630 - loss: 0.0110 - val_accuracy: 0.9920 - val_loss: 0.0068
+Epoch 2/40
+
+Epoch 2: val_loss improved from 0.00683 to 0.00465, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras1728/1728 - 237s - 137ms/step - accuracy: 0.9940 - loss: 0.0023 - val_accuracy: 0.9923 - val_loss: 0.0046
+Epoch 3/40
+
+Epoch 3: val_loss did not improve from 0.00465
+1728/1728 - 183s - 106ms/step - accuracy: 0.9941 - loss: 0.0020 - val_accuracy: 0.9815 - val_loss: 0.0083
+Epoch 4/40
+
+Epoch 4: val_loss did not improve from 0.00465
+1728/1728 - 179s - 103ms/step - accuracy: 0.9944 - loss: 0.0019 - val_accuracy: 0.9679 - val_loss: 0.0267
+Epoch 5/40
+
+Epoch 5: val_loss improved from 0.00465 to 0.00201, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras1728/1728 - 193s - 111ms/step - accuracy: 0.9951 - loss: 0.0016 - val_accuracy: 0.9952 - val_loss: 0.0020
+Epoch 6/40
+
+Epoch 6: val_loss improved from 0.00201 to 0.00162, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras1728/1728 - 129s - 74ms/step - accuracy: 0.9955 - loss: 0.0016 - val_accuracy: 0.9962 - val_loss: 0.0016
+Epoch 7/40
+
+Epoch 7: val_loss did not improve from 0.00162
+1728/1728 - 128s - 74ms/step - accuracy: 0.9955 - loss: 0.0014 - val_accuracy: 0.9871 - val_loss: 0.0071
+Epoch 8/40
+
+Epoch 8: val_loss improved from 0.00162 to 0.00122, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras1728/1728 - 127s - 74ms/step - accuracy: 0.9959 - loss: 0.0013 - val_accuracy: 0.9962 - val_loss: 0.0012
+Epoch 9/40
+
+Epoch 9: val_loss did not improve from 0.00122
+1728/1728 - 128s - 74ms/step - accuracy: 0.9962 - loss: 0.0012 - val_accuracy: 0.9962 - val_loss: 0.0014
+Epoch 10/40
+
+Epoch 10: val_loss did not improve from 0.00122
+1728/1728 - 128s - 74ms/step - accuracy: 0.9966 - loss: 0.0012 - val_accuracy: 0.9961 - val_loss: 0.0014
+Epoch 11/40
+
+Epoch 11: val_loss did not improve from 0.00122
+1728/1728 - 126s - 73ms/step - accuracy: 0.9965 - loss: 0.0011 - val_accuracy: 0.9962 - val_loss: 0.0014
+Epoch 12/40
+
+Epoch 12: val_loss did not improve from 0.00122
+1728/1728 - 143s - 83ms/step - accuracy: 0.9964 - loss: 0.0011 - val_accuracy: 0.9959 - val_loss: 0.0017
+Epoch 13/40
+
+Epoch 13: val_loss did not improve from 0.00122
+1728/1728 - 127s - 74ms/step - accuracy: 0.9970 - loss: 0.0010 - val_accuracy: 0.9954 - val_loss: 0.0017
+Epoch 14/40
+
+Epoch 14: val_loss did not improve from 0.00122
+1728/1728 - 126s - 73ms/step - accuracy: 0.9967 - loss: 0.0010 - val_accuracy: 0.9965 - val_loss: 0.0013
+Epoch 15/40
+
+Epoch 15: val_loss did not improve from 0.00122
+1728/1728 - 126s - 73ms/step - accuracy: 0.9971 - loss: 0.0010 - val_accuracy: 0.9965 - val_loss: 0.0014
+Epoch 16/40
+
+Epoch 16: val_loss did not improve from 0.00122
+1728/1728 - 128s - 74ms/step - accuracy: 0.9971 - loss: 9.6111e-04 - val_accuracy: 0.9947 - val_loss: 0.0022
+Epoch 17/40
+
+Epoch 17: val_loss did not improve from 0.00122
+1728/1728 - 127s - 74ms/step - accuracy: 0.9969 - loss: 9.8966e-04 - val_accuracy: 0.9951 - val_loss: 0.0018
+Epoch 18/40
+
+Epoch 18: val_loss improved from 0.00122 to 0.00118, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras
+1728/1728 - 126s - 73ms/step - accuracy: 0.9971 - loss: 8.8564e-04 - val_accuracy: 0.9965 - val_loss: 0.0012
+Epoch 19/40
+
+Epoch 19: val_loss improved from 0.00118 to 0.00103, saving model to F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy\results\best_cnn_lstm.keras
+1728/1728 - 145s - 84ms/step - accuracy: 0.9971 - loss: 9.2123e-04 - val_accuracy: 0.9971 - val_loss: 0.0010
+Epoch 20/40
+
+Epoch 20: val_loss did not improve from 0.00103
+1728/1728 - 127s - 73ms/step - accuracy: 0.9972 - loss: 9.7055e-04 - val_accuracy: 0.9958 - val_loss: 0.0017
+Epoch 21/40
+
+Epoch 21: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9970 - loss: 9.4240e-04 - val_accuracy: 0.9970 - val_loss: 0.0012
+Epoch 22/40
+
+Epoch 22: val_loss did not improve from 0.00103
+1728/1728 - 127s - 73ms/step - accuracy: 0.9974 - loss: 8.9083e-04 - val_accuracy: 0.9966 - val_loss: 0.0012
+Epoch 23/40
+
+Epoch 23: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9972 - loss: 8.7183e-04 - val_accuracy: 0.9967 - val_loss: 0.0012
+Epoch 24/40
+
+Epoch 24: val_loss did not improve from 0.00103
+1728/1728 - 127s - 74ms/step - accuracy: 0.9975 - loss: 8.3355e-04 - val_accuracy: 0.9968 - val_loss: 0.0011
+Epoch 25/40
+
+Epoch 25: val_loss did not improve from 0.00103
+1728/1728 - 127s - 74ms/step - accuracy: 0.9975 - loss: 7.8644e-04 - val_accuracy: 0.9968 - val_loss: 0.0013
+Epoch 26/40
+
+Epoch 26: val_loss did not improve from 0.00103
+1728/1728 - 127s - 73ms/step - accuracy: 0.9974 - loss: 8.5976e-04 - val_accuracy: 0.9966 - val_loss: 0.0015
+Epoch 27/40
+
+Epoch 27: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9975 - loss: 8.6337e-04 - val_accuracy: 0.9962 - val_loss: 0.0014
+Epoch 28/40
+
+Epoch 28: val_loss did not improve from 0.00103
+1728/1728 - 127s - 74ms/step - accuracy: 0.9977 - loss: 7.6816e-04 - val_accuracy: 0.9962 - val_loss: 0.0014
+Epoch 29/40
+
+Epoch 29: val_loss did not improve from 0.00103
+1728/1728 - 127s - 73ms/step - accuracy: 0.9976 - loss: 8.2704e-04 - val_accuracy: 0.9959 - val_loss: 0.0013
+Epoch 30/40
+
+Epoch 30: val_loss did not improve from 0.00103
+1728/1728 - 129s - 75ms/step - accuracy: 0.9974 - loss: 8.1078e-04 - val_accuracy: 0.9970 - val_loss: 0.0011
+Epoch 31/40
+
+Epoch 31: val_loss did not improve from 0.00103
+1728/1728 - 139s - 81ms/step - accuracy: 0.9977 - loss: 7.4836e-04 - val_accuracy: 0.9966 - val_loss: 0.0014
+Epoch 32/40
+
+Epoch 32: val_loss did not improve from 0.00103
+1728/1728 - 129s - 75ms/step - accuracy: 0.9975 - loss: 7.9673e-04 - val_accuracy: 0.9969 - val_loss: 0.0011
+Epoch 33/40
+
+Epoch 33: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9976 - loss: 7.8365e-04 - val_accuracy: 0.9970 - val_loss: 0.0011
+Epoch 34/40
+
+Epoch 34: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9977 - loss: 7.2173e-04 - val_accuracy: 0.9967 - val_loss: 0.0013
+Epoch 35/40
+
+Epoch 35: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9979 - loss: 7.1500e-04 - val_accuracy: 0.9967 - val_loss: 0.0012
+Epoch 36/40
+
+Epoch 36: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9976 - loss: 8.1237e-04 - val_accuracy: 0.9967 - val_loss: 0.0011
+Epoch 37/40
+
+Epoch 37: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9976 - loss: 7.8417e-04 - val_accuracy: 0.9969 - val_loss: 0.0011
+Epoch 38/40
+
+Epoch 38: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9979 - loss: 7.3149e-04 - val_accuracy: 0.9967 - val_loss: 0.0011
+Epoch 39/40
+
+Epoch 39: val_loss did not improve from 0.00103
+1728/1728 - 126s - 73ms/step - accuracy: 0.9974 - loss: 7.4488e-04 - val_accuracy: 0.9967 - val_loss: 0.0011
+Epoch 40/40
+
+Epoch 40: val_loss did not improve from 0.00103
+1728/1728 - 133s - 77ms/step - accuracy: 0.9978 - loss: 6.9615e-04 - val_accuracy: 0.9970 - val_loss: 0.0013
+
+[4] Loading BEST saved model...
+
+[5] Extracting deep features...
+864/864 ━━━━━━━━━━━━━━━━━━━━ 30s 34ms/step   
+216/216 ━━━━━━━━━━━━━━━━━━━━ 329s 2s/step   
+
+[6] Scaling + PCA...
+PCA explained variance: 0.9997
+
+[7] Training SVM...
+
+[8] Evaluating...
+============================================================
+HYBRID PIPELINE RESULTS
+============================================================
+Accuracy: 0.9973950795947901
+              precision    recall  f1-score   support
+
+           0     0.9977    0.9997    0.9987     13744
+           1     0.9167    0.5789    0.7097        76
+
+    accuracy                         0.9974     13820
+   macro avg     0.9572    0.7893    0.8542     13820
+weighted avg     0.9972    0.9974    0.9971     13820
+
+
+[9] Saving artifacts...
+✅ All saved successfully.
+PS F:\1\Code and Ablation Study\hyb_Cnn-Lstm\BIDSDATAFINAL - Copy>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

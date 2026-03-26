@@ -1,0 +1,21 @@
+==================== RESULTS ====================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0     0.9410    0.9912    0.9654     31125
+           1     0.3309    0.0657    0.1096      2071
+
+    accuracy                         0.9334     33196
+   macro avg     0.6359    0.5284    0.5375     33196
+weighted avg     0.9029    0.9334    0.9120     33196
+
+Confusion Matrix:
+[[30850   275]
+ [ 1935   136]]
+
+Test set class distribution:
+Non-Seizure: 31125
+Seizure: 2071
+
+Evaluation completed successfully.
