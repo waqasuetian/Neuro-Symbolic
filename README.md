@@ -41,7 +41,7 @@ Experiments are conducted on EEG datasets (e.g., TUH EEG dataset).
 ⚠️ Due to size and licensing constraints, datasets are not included.
 
 **Dataset Access:**
-[Provide Link Here]
+[https://isip.piconepress.com/projects/tuh and https://doi.org/10.13026/5d4a-j060]
 
 **Expected Format:**
 
@@ -148,8 +148,7 @@ pip install -r requirements.txt
 
 ### Step 3 — Prepare Dataset
 
-* Download dataset from provided link
-* Place in `data/` directory
+* Download the dataset from above provided link. 
 
 ### Step 4 — Run Pipeline
 
