@@ -88,7 +88,15 @@ Key libraries:
 * matplotlib
 
 ---
+## System Architecture
 
+<p align="center">
+  <img src="figures/architecture.png" width="800"/>
+</p>
+
+<p align="center">
+  <b>Figure 1:</b> Proposed Neuro-Symbolic Seizure Detection Framework combining SVM and rule-based reasoning.
+</p>
 ## 6. Methodology
 
 The proposed system follows a hybrid pipeline:
