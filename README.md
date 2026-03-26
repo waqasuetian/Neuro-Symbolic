@@ -218,13 +218,7 @@ year={2026}
 
 ---
 
-## 13. License
 
-.
-
----
-
-## 14. Contributions
 
 
 
