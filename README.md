@@ -227,4 +227,4 @@ year={2026}
 ## 15. Contact
 
 Waqas Ali
-Email: [your_email@gmail.com](waqasalizafarali@gmail.com)
+Email: [waqasalizafarali@gmail.com]
