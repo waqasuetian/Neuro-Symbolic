@@ -1,230 +1,214 @@
-# Trustworthy Neuro-Symbolic Framework for Clinically Aligned Seizure Monitoring
-
-**A Hybrid Support Vector Machine and Rule-Based Engine for EEG Analysis**
+#  Trustworthy Neuro-Symbolic Framework for Clinically Aligned EEG Seizure Detection
 
 ---
 
-## 1. Overview
+##  Description
 
-This repository provides a reproducible implementation of a **neuro-symbolic framework** that integrates **machine learning (Support Vector Machines)** with a **rule-based reasoning system** for seizure detection using EEG signals.
+This project presents a **multi-task neuro-symbolic AI framework** for EEG-based seizure analysis. It integrates deep learning, machine learning, and rule-based clinical reasoning to improve **accuracy, interpretability, and clinical trustworthiness**.
 
-The objective is to enhance:
+The system is designed to perform three main tasks:
 
-* Predictive performance
-* Interpretability
-* Clinical relevance
+- Seizure detection (binary classification)
+- Seizure type classification (multi-class classification)
+- Explainable clinical reasoning using symbolic rules
 
-by combining statistical learning with domain-driven symbolic inference.
+It is evaluated on two EEG datasets:
 
----
-
-## 2. Repository Structure
-
-```
-Neuro-Symbolic/
-│── src/                  # Core implementation
-│── rules/                # Rule-based engine definitions
-│── models/               # Trained/placeholder models
-│── scripts/              # Execution scripts
-│── data/                 # (Not included - external)
-│── results/              # (Not included - external)
-│── requirements.txt
-│── README.md
-```
+- TUH EEG Seizure Corpus (v2.0.3)
+- BIDS Siena Scalp EEG Dataset
 
 ---
 
-## 3. Dataset Information
+##  Dataset Information
+
+### 🔹 TUH EEG Seizure Corpus (v2.0.3)
+
+- Large-scale clinical EEG dataset
+- Includes expert annotations (seizure onset, offset, type)
+- Widely used benchmark for seizure detection research
+
+### 🔹 BIDS Siena Scalp EEG Dataset
+
+- Standard BIDS-formatted EEG dataset
+- High-quality annotated recordings
+- Used for cross-dataset validation
+
+### EEG Configuration
+
+- Sampling Frequency: 256 Hz  
+- Channels: 19 (10–20 system)  
+- Epoch Length: 4 seconds (1024 samples)
+
+---
+
+### Dataset Information
 
 Experiments are conducted on EEG datasets (e.g., TUH EEG dataset).
 
 ⚠️ Due to size and licensing constraints, datasets are not included.
 
-**Dataset Access:**
-[https://isip.piconepress.com/projects/tuh and https://doi.org/10.13026/5d4a-j060]
+Dataset Access: [https://isip.piconepress.com/projects/tuh and https://doi.org/10.13026/5d4a-j060]
 
-**Expected Format:**
+Expected Format:
 
-```
 data/
 │── subject_01/
 │── subject_02/
 │── ...
-```
+
+##  Code Information
+
+The repository is structured into dataset-specific and task-specific modules.
+
+### 🔹 TUH Pipeline
+
+- EEG preprocessing and filtering
+- Feature extraction from seizure and non-seizure segments
+- Detection of seizure
+- Rule-based clinical reasoning system
+
+### 🔹 BIDS Pipeline
+
+- BIDS-format preprocessing
+- Dataset-specific feature engineering
+- Detection of seizure activity
+- Rule-based reasoning aligned with annotations
+
+### 🔹 Shared Components
+
+- CNN–LSTM feature extractor for EEG representation
+- PCA-based dimensionality reduction
+- SVM classifier for classification tasks
+- Hybrid fusion of neural and symbolic outputs
+- Utility scripts for evaluation and visualization
 
 ---
 
-## 4. Code Description
+## Tasks
 
-### Core Modules
+###  Seizure Detection
 
-* **Feature Extraction**: Extracts temporal and spectral EEG features
-* **SVM Model**: Performs seizure classification
-* **Rule-Based Engine**: Applies domain knowledge for event-level refinement
-* **Evaluation Module**: Computes performance metrics
+Binary classification:
 
----
-
-## 5. Requirements
-
-### Environment
-
-* Python ≥ 3.8
-
-### Dependencies
-
-Install via:
-
-```
-pip install -r requirements.txt
-```
-
-Key libraries:
-
-* numpy
-* pandas
-* scikit-learn
-* scipy
-* matplotlib
-
----
-## System Architecture
-
-<p align="center">
-  <img src="figures/architecture.png" width="800"/>
-</p>
-
-<p align="center">
-  <b>Figure 1:</b> Proposed Neuro-Symbolic Seizure Detection Framework combining SVM and rule-based reasoning.
-</p>
-## 6. Methodology
-
-The proposed system follows a hybrid pipeline:
-
-1. **Preprocessing**
-
-   * Signal normalization
-   * Noise/artifact handling
-
-2. **Segmentation**
-
-   * EEG signals divided into temporal windows
-
-3. **Feature Engineering**
-
-   * Time-domain features
-   * Frequency-domain features
-
-4. **Machine Learning**
-
-   * SVM classifier trained on extracted features
-
-5. **Rule-Based Reasoning**
-
-   * Expert-defined rules refine predictions
-
-6. **Decision Fusion**
-
-   * Final output combines statistical and symbolic outputs
+- Seizure
+- Non-seizure
+  Uses CNN–LSTM + SVM pipeline.
 
 ---
 
-## 7. Reproducibility Instructions
+###  Explainable Neuro-Symbolic Reasoning
 
-To reproduce the results:
+A rule-based system for clinical interpretability:
 
-### Step 1 — Clone Repository
+- Spike-and-wave morphology detection
+- Rhythmicity analysis
+- Channel synchrony evaluation
+- Seizure evolution tracking
 
-```
+---
+
+##  Methodology
+
+### 1. Preprocessing
+
+- Bandpass filtering (0.5–40 Hz)
+- Notch filtering (50 Hz)
+- Z-score normalization
+
+### 2. Segmentation
+
+- EEG divided into 4-second windows
+- Ensures consistent temporal input
+
+### 3. Feature Extraction
+
+- CNN–LSTM extracts deep temporal-spatial features
+- Statistical features for classical ML models
+
+### 4. Dimensionality Reduction
+
+- PCA reduces feature space for SVM training
+
+### 5. Classification
+
+- SVM performs seizure detection 
+
+### 6. Rule-Based System
+
+- Clinical rules evaluate EEG morphology and dynamics
+
+### 7. Hybrid Fusion
+
+Final prediction:
+$$
+Final\ Prediction = \alpha \cdot Neural\ Model + (1 - \alpha) \cdot Rule\ Engine
+$$
+
+##  Results
+
+| Model Type   | BIDS Accuracy | TUH Accuracy |
+| ------------ | ------------- | ------------ |
+| Neural Model | 98.75%        | 93.41%       |
+| Rule-Based   | 73.8%         | 65.0%        |
+| Hybrid Model | 93.84%        | 86.06%       |
+
+---
+
+##  Usage Instructions
+
+###  Clone Repository
+
+```bash
 git clone https://github.com/waqasuetian/Neuro-Symbolic.git
 cd Neuro-Symbolic
 ```
 
-### Step 2 — Install Dependencies
+---
 
-```
-pip install -r requirements.txt
-```
+##  Requirements
 
-### Step 3 — Prepare Dataset
+### Environment
 
-* Download the dataset from above provided link. 
+- Python ≥ 3.8
 
-### Step 4 — Run Pipeline
+###  Key Libraries
 
-```
-python main.py
-```
-
-### Step 5 — Evaluate Results
-
-```
-python evaluate.py
-```
+- mne
+- numpy
+- pandas
+- scikit-learn
+- scipy
+- matplotlib
 
 ---
 
-## 8. Experimental Results
+##  Experimental Results
 
-Performance is evaluated using:
+Performance is evaluated using the following metrics:
 
-* Accuracy
-* Sensitivity (Recall)
-* Specificity
-* F1-score
+- Accuracy  
+- Sensitivity (Recall)  
+- Specificity  
+- F1-score  
 
-⚠️ Large result files are not included; they are available externally.
-
----
-
-## 9. Algorithms
-
-The repository implements:
-
-* Support Vector Machine (SVM) classifier
-* Rule-based inference engine
-* Hybrid decision fusion mechanism
+⚠️ Large result files are not included in this repository. They are available externally upon request.
 
 ---
 
-## 10. Reproducibility Statement
+### Key Insight
 
-All experiments can be reproduced by:
-
-* Using the same dataset
-* Following the pipeline described above
-* Maintaining identical preprocessing and parameter settings
+This project combines deep learning + machine learning + clinical rule-based reasoning to build a multi-task neuro-symbolic EEG system that is both accurate and interpretable for clinical applications.
 
 ---
 
-## 11. Limitations
-
-* Dataset not included due to size constraints
-* Performance may vary across datasets
-* Rule definitions may require domain adaptation
-
----
-
-## 12. Citation
+###  Citation
 
 If you use this work, please cite:
 
-@article{ali2026neurosymbolic,
-title={A Neuro-Symbolic Framework for Seizure Detection},
-author={Waqas Ali},
-journal={PeerJ},
-year={2026}
-}
+@article{ali2026neurosymbolic, title={A Neuro-Symbolic Framework for Seizure Detection}, author={Waqas Ali}, journal={PeerJ}, year={2026} }
 
 ---
 
+### Contact
 
-
-
-
----
-
-## 15. Contact
-
-Waqas Ali
-Email: [waqasalizafarali@gmail.com]
+Waqas Ali Email: [waqasalizafarali@gmail.com]
